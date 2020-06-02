@@ -10,7 +10,7 @@ public class Program {
 //		
 //		view.print();
 		
-	
+		//필요하던 필요하지않던 무조건 ... new NewRecordView();
 		
 		
 		
