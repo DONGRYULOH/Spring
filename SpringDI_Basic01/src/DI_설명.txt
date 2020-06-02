@@ -96,15 +96,15 @@ DI3 + interface 까지 포함된 코드
 Spring FrameWork 사용 
 
 1. Spring.IO 사이트 방문
-   1.1 http://projects.spring.io/spring-framework/
+   1.1  https://repo.spring.io/release/org/springframework/spring/
    1.2 사용하려는 framework version 확인
    1.3 Maven : 주소 복사 해서 https://mvnrepository.com/ 사이트
    1.4 local 저장소에 다운받는 것이 원칙
 
    -Spring 사이트 다운로드
-   http://projects.spring.io/spring-framework/
+   https://repo.spring.io/release/org/springframework/spring/
    http://maven.springframework.org/release/org/springframework/spring/
-
+	
 
 
 
