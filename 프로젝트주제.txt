@@ -1,0 +1,42 @@
+추천(Recommendation) 시스템 - 알고리즘 Trend 정리
+
+참고링크)
+
+1.http://hoondongkim.blogspot.com/2019/03/recommendation-trend.html
+
+2. https://brunch.co.kr/@biginsight/15 (추천 알고리즘 종류) 
+
+3.https://yeomko.tistory.com/3
+
+4.https://needjarvis.tistory.com/451
+
+추천 엔진의 이해) 
+
+링크 : https://rstatistics.tistory.com/28?category=713124
+
+
+Mahout이란 추천시스템 오픈소스가 있습니다. 커스터마이징 해보세요 
+
+
+<장바구니 알고리즘(apriori algorithm)>
+
+
+< Apache Mahout 프레임 워크 > 
+
+참고링크 : https://argonet.co.kr/apache-mahout-%EC%86%8C%EA%B0%9C/
+
+
+자바 코드로 알고리즘 구현??? 
+1. 필요한 라이브러리(데이터 마이닝??)
+참고링크 : http://www.philippe-fournier-viger.com/spmf/
+
+
+
+<영화 추천 알고리즘 사이트 예제> 
+참고링크 : https://okky.kr/article/693428
+
+사이트 주소 : https://hermercur.pythonanywhere.com/
+
+깃허브 : https://github.com/CGKim412/movie_reco
+
+
