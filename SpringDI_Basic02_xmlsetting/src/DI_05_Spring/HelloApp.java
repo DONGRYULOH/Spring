@@ -45,6 +45,7 @@ public class HelloApp {
 		  //getBean()_return 타입은 Object >> down캐스팅 해서 작업함 
 		  
 		  // ****** 주의 사항 getBean() 함수를 호출하면 새로운 객체를 만들지 않음 -> new 하지 않음 그냥컨테이너 않에서 끄집어옴 
+		  // ****** getBean() 함수는 new 하지 않는다 *****
 		  //*** 스프링 컨테이너가 가지는 객체의 타입 : default 값 singleton 
 		  //** 예외적으로 getBean() 할때 객체를 새로 생성할수 있는 방법도 있긴한데 거의 쓰지않음 
 		  MyBean mybean = context.getBean("mybean",MyBean.class); 
@@ -58,8 +59,37 @@ public class HelloApp {
 		  System.out.println("mybean3 주소값:"+mybean3);
 		  
 		  System.out.println("mybean4주소값:"+mybean4);
+		  
+		  
+		  ////////////////////////////////////////////////////////////////////////////////////////
+		  
+		  Singleton single = context.getBean("single",Singleton.class);
+		  Singleton single2 = context.getBean("single",Singleton.class);
+		  
+		  System.out.println("single 주소값:"+single);
+		  System.out.println("single 주소값:"+single2);
+		  
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

@@ -43,7 +43,15 @@ Spring 자신만의 [컨테이너(Spring 전용 메모리 공간)] 제공 (IOC) 
 		<constructor-arg value="hong"/>
 	</bean>
 	
-	
+	<bean id="single" class="DI_05_Spring.Singleton" factory-method="getInstance"></bean>
+	<!-- 
+		JAVA
+		Singleton single = Singleton.getInstance();
+		xml 설정 
+		3.x.x.x 버전 : factory-method="getInstance"
+		
+		4.x.x.x 버전 이후 : factory-method="getInstance" 생략가능  가독성을 위해서라도 생략을 하지않는게 좋지않을까?? 
+	 -->
 	
 
 

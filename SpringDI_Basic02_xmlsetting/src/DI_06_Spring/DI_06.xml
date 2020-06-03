@@ -29,50 +29,46 @@ Spring 자신만의 [컨테이너(Spring 전용 메모리 공간)] 제공 (IOC) 
 	생성자 주입   : (의무적)   : <constructor-arg>
 	setter  주입 : (선택적) : <property name
 	
-	1. 아래를 스프링 프레임웍 사용해서 바꾸기 
-		MyBean mybean = new MyBean();
-		MyBean mybean2 = new MyBean("hong");
+	JAVA 코드) 
 	
-	2. 아래를 스프링 프레임웍 사용해서 바꾸기 
-		Singleton single = Singleton.getInstance();
-		Singleton single2 = Singleton.getInstance();
--->
+	//Oracle 사용해서 쓴다고 가정시 
+	OracleArticleDao articledao = new OracleArticleDao();
+	ArticleService articleservice = new ArticleService(articledao);
+	
+	Article article = new Article();
+	articleservice.write(article);
+	
+	위자바 코드를 bean 객체 생성 , 조립 스프링을 이용해서 바꾸기)
+	
+	
 
-	<bean id="mybean" class="DI_05_Spring.MyBean"></bean>
-	<bean id="mybean2" class="DI_05_Spring.MyBean">
-		<constructor-arg value="hong"/>
+-->  
+	<!-- 1.OracleArticleDao 객체 생성  -->
+	<bean id="oracle_dao" class="DI_06_Spring.OracleArticleDao"></bean>
+	<bean id="mysql_dao" class="DI_06_Spring.MySqlArticleDao"></bean>
+	
+	<!-- 2.ArticleService 객체 생성후 생성자 파라미터로 OracleArticleDao 객체의 주소를 너줘여함(인젝션)  -->
+	<bean id="article_service" class="DI_06_Spring.ArticleService">
+		<constructor-arg ref="mysql_dao"/>
+		<!-- 
+		<생성자로 주입받는게 객체니까 ref로 해당 객체의 주소를 넣어줌
+		<constructor-arg>
+			<ref bean="oracle_dao"/>
+		</constructor-arg> 
+		-->
 	</bean>
 	
-	<bean id="single" class="DI_05_Spring.Singleton" factory-method="getInstance"></bean>
-	<!-- 
-		JAVA
-		Singleton single = Singleton.getInstance();
-		xml 설정 
-		3.x.x.x 버전 : factory-method="getInstance"
-		
-		4.x.x.x 버전 이후 : factory-method="getInstance" 생략가능  가독성을 위해서라도 생략을 하지않는게 좋지않을까?? 
-	 -->
+	<!-- 2.ArticleService 객체 생성후 생성자 파라미터로 MySqlArticleDao 객체의 주소를 너줘여함  -->
+	<bean id="article_service_mysql" class="DI_06_Spring.ArticleService">
+		<constructor-arg ref="mysql_dao"/>
+	</bean>
 	
-
-
-	<!-- <bean id="messagebean" name="m1,m2,m3;m4" class="DI_04_Spring.MessageBeanImpl">
-		<constructor-arg>생성자의 파라미티로 값을 줄수있음
-			<value>hong</value>
-		</constructor-arg>
-		
-		<constructor-arg value="hong"/> 이런식으로 줄여쓸수 있음 
-		
-		 property 역할 SetGreeting을 구현하고 있는 memberfield 이름을 name 에다 넣음
-		<property name="greeting">
-			<value>hello</value>
-		</property>
-		
-		  <property name="greeting" value="hello"/> 이런식으로 줄여쓸수 있음 
-		
-	</bean> -->
+	<!-- 3.Article 객체 생성  -->
+	<bean id="article" class="DI_06_Spring.Article"></bean>
 	
 	
 	
+	  
 </beans>
 
 

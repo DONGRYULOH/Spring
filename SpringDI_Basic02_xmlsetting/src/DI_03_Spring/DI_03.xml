@@ -19,7 +19,7 @@ MessageBean_kr messagebean_kr = new MessageBean_kr();
 
 MessageBean messagebean = new MessageBean_kr();
 -->
-	<bean id="message" class="DI_03_Spring.MessageBean_kr"></bean>
+	<bean id="message" class="DI_03_Spring.MessageBean_en"></bean>
 </beans>
 
 

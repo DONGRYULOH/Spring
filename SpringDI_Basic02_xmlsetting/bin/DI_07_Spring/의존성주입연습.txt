@@ -1,0 +1,16 @@
+DI(의존성 주입) 
+A클래스 , B클래스
+>> A라는 클래스는 B라는 클래스가 필요해 
+>> A라는 클래스는 B에 의존하는구나 
+>> 의존 : 상속,포함(has -a) 
+>>  포함(has -a) 표현 >> 
+
+1.Constructor injection 
+2.Setter injection 
+
+3.injection 대상 
+-값 (value) : "A",1000 
+
+-객체 (bean) : ref 
+
+-Collection : list,set,map 을 구현하는 객체들 
