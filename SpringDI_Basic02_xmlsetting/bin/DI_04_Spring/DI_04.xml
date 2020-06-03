@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	   http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--  
+Spring 자신만의 [컨테이너(Spring 전용 메모리 공간)] 제공 (IOC) 안에 
+[객체를 만들고 조립(관계...의존성)] 설정
+
+>>DIConfig.xml 문서를  read 해서 ....안에 있는 코드 먼저 실행
+>>xml 파일 은 컨테이너를 구성하는 객체를 생성하고 의존을 설정하는 파일
+또는  Annotation 통해서 컨테이너 자원 구성
+
+:제어의 역전 (프로그램의 제어구조를 바꾼다)
+:작은 단위의 부품을 만들어 놓고 그 것을 조립하는 행위 (레고 블럭 처럼)
+
+	MessageBeanImpl messagebean = new MessageBeanImpl("hong"); //생성자 
+	messagebean.setGreeting("hello"); //setter
+	
+	//main
+	messagebean.sayHello()
+	
+	DI 문법)
+	<bean id="한개의 이름(식별자)"  name="여러개의 이름>> 구분자(,) (공백) (;)"
+	ex) <bean id=""  class=""  name="m1,m2 m3;m4"
+	
+	객체를 생성하고 필요한 객체를 주입 >> xml 파일
+	주입방법 :
+	생성자 주입   : (의무적)   : <constructor-arg>
+	setter  주입 : (선택적) : <property name
+-->
+	<bean id="messagebean" name="m1,m2,m3;m4" class="DI_04_Spring.MessageBeanImpl">
+		<constructor-arg><!-- 생성자의 파라미티로 값을 줄수있음 -->
+			<value>hong</value>
+		</constructor-arg>
+		
+		<!-- <constructor-arg value="hong"/> 이런식으로 줄여쓸수 있음  -->
+		
+		<!--  property 역할 SetGreeting을 구현하고 있는 memberfield 이름을 name 에다 넣음 -->
+		<property name="greeting">
+			<value>hello</value>
+		</property>
+		
+		 <!--  <property name="greeting" value="hello"/> 이런식으로 줄여쓸수 있음  -->
+		
+	</bean>
+</beans>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
