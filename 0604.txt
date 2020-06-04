@@ -1,0 +1,40 @@
+
+
+AOP 조사 
+
+
+
+스프링 프레임워크 DI 개념정리)  
+
+1. 일체형  ex)일체형 컴퓨터 
+-> A a = new A(); 
+>> 객체를 생성하고 나면 그안에 부품으로 뭐가 있는지모름 그 부품을 바꿔낄수 없음 
+
+2. 조립형 (개발자의 입맛대로 부품을 갈아끼울수 있음) 
+ex)조립식 컴퓨터 -> 직접 조립을 해야된다 단점이 있는데 이단점을 해결하기 위해서 서비스 센터에 맡긴다던지 하면 어느정도 불편함 해결가능
+
+-> B b = new B();  - 부품의 역할(Dependency) 
+-> A a = new A(); 
+>> A 라는 객체를 만드는데 A는 그냥쓸수있는게 아니라 부품을 만들어서 끼워줘야됨 
+>>  a.setB(b); 이런식으로 부품을 조립하는 역할을(Injection) 이라고 함 
+>> 부품을 조립하는 역할 두가지( 1. 생성자 A a = new A(b);  2.Set함수  a.setB(b) )
+>> 이런식으로 부품으로 조립하는식으로 완성된 객체를 만들었을떄의 장단점?? 
+>> 부품을 쉽게 바꿀수 있음 그러나 일일히 부품을 만들어서 끼워너야 된다는점
+
+결론 -> DI(Dependency Injection)을 스프링 프레임워크가 해주는데 이걸 사용해서 입맛대로 부품조립을 하면됨 
+
+IOC(Inversion Of Control) 컨테이너
+
+조립형 컴퓨터 주문서 - RAM 16 , CPU I5-7500 , HDD 500GB 
+>> 이런식으로 주문서를 요청하면 XML/Annotation 으로 해당 주문에 맞는 부품들을 조립하고 만들어서 제공함 
+
+
+@Autowired 역할 
+-> xml 에서하는 injection 작업(setter 또는 생성자 injection)을 대신수행해줌
+
+@Qualifier 역할 
+-> xml 에서 여러개의 bean 객체가 존재시에 어떤걸 injection할지 모르는데 injection할 객체의 변수를 지정해줄수 있음 
+->@Qualifier("a")  <bean id="a" class="DI_Annotation_03.Recorder"></bean> 이런식으로
+
+
+
