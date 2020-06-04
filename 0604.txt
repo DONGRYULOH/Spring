@@ -37,4 +37,5 @@ IOC(Inversion Of Control) 컨테이너
 ->@Qualifier("a")  <bean id="a" class="DI_Annotation_03.Recorder"></bean> 이런식으로
 
 
-
+스프링으로 게시판 만들기 
+참고링크 : https://tychejin.tistory.com/category/SPRING/%EA%B2%8C%EC%8B%9C%ED%8C%90%20%EB%A7%8C%EB%93%A4%EA%B8%B0?page=3
