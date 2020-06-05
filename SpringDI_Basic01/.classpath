@@ -7,5 +7,6 @@
 	<classpathentry kind="lib" path="D:/bit155/SPRING/Spring_Utils/spring-framework-4.2.5.RELEASE-dist/spring-framework-4.2.5.RELEASE/libs/spring-core-4.2.5.RELEASE.jar"/>
 	<classpathentry kind="lib" path="D:/bit155/SPRING/Spring_Utils/spring-framework-4.2.5.RELEASE-dist/spring-framework-4.2.5.RELEASE/libs/spring-expression-4.2.5.RELEASE.jar"/>
 	<classpathentry kind="lib" path="D:/bit155/SPRING/Spring_Utils/bit155.selection/SPRING/Spring_Utils/Framework/spring-framework-3.0.2.RELEASE-dependencies/org.apache.commons/com.springsource.org.apache.commons.logging/1.1.1/com.springsource.org.apache.commons.logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="D:/bit155/SPRING/Spring_Utils/spring-framework-4.2.5.RELEASE-dist/spring-framework-4.2.5.RELEASE/libs/spring-aop-4.2.5.RELEASE.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

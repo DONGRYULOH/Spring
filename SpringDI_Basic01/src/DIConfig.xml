@@ -43,11 +43,15 @@ public static void main(String[] args) {
    ** <property name은  setter 구현하고 있는 member field 이름을 사용
    ** setRecord() 의 >>  private NewRecord record;
 -->
-	<bean class="Spring_DI4.NewRecord" id="record"></bean>
-	<!-- NewRecord record = new NewRecord()  -->
+
+	<bean id="exam" class="Spring.Exam01.DIconfig"></bean>
+	
+	
+	<!-- <bean class="Spring_DI4.NewRecord" id="record"></bean>
+	NewRecord record = new NewRecord() 
 	<bean class="Spring_DI4.NewRecordView" id="view">
 		<property name="record" ref="record"></property>
-	</bean>
+	</bean> -->
 	<!-- name="record" 이녀석은 setter를 구현하고 있는 member field명을 적어야함  
 			  view.setRecord(record); //필요한 객체의 주소 주입
 	-->
